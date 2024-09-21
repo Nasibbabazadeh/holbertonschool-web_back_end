@@ -1,1 +1,1 @@
-#Readme for es6
+#JS INTRO : ECMAScript 6 features : block scope,spread and rest operators,template literals

@@ -1,8 +1,5 @@
 export default class Building {
   constructor(sqft) {
-    if (new.target === evacuationWarningMessage) {
-      throw new Error('Cannot instantiate abstract class Building');
-    }
     this._sqft = sqft;
   }
 

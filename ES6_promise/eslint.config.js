@@ -15,7 +15,6 @@ module.exports = {
   },
   plugins: ['jest'],
   rules: {
-    'comma-dangle': ['error', 'never'],
     'no-console': 'off',
     'no-shadow': 'off',
     'no-restricted-syntax': ['error', 'LabeledStatement', 'WithStatement'],

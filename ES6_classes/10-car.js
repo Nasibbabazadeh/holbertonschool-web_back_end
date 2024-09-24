@@ -4,12 +4,36 @@ const _color = Symbol('color');
 
 export default class Car {
   constructor(brand, motor, color) {
-    this_brand = brand;
-    this_motor = motor;
-    this_color = color;
+    this[_brand] = brand;
+    this[_motor] = motor;
+    this[_color] = color;
   }
 
   cloneCar() {
-    return new this.constructor(this_brand, this_motor, this_color);
+    return new this.constructor(this[_brand], this[_motor], this[_color]);
+  }
+
+  get brand() {
+    return this[_brand];
+  }
+
+  get motor() {
+    return this[_motor];
+  }
+
+  get color() {
+    return this[_color];
   }
 }
+class TestCar extends Car {}
+
+const tc1 = new TestCar('Nissan', 'Turbo', 'Pink');
+const tc2 = tc1.cloneCar();
+
+console.log(tc1);
+console.log(tc1 instanceof TestCar);
+
+console.log(tc2);
+console.log(tc2 instanceof TestCar);
+
+console.log(tc1 == tc2);
